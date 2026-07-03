@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[oc]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+
+# Secrets (never commit API keys)
+.env
+*.env
+!.env.example
+
+# Nodiq runtime data
+/data/
+chroma_db/
+
+# VS Code
+.vscode/
+
+# OS
+Thumbs.db
