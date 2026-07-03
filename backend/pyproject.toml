@@ -3,7 +3,9 @@ name = "nodiq-backend"
 version = "0.1.0"
 description = "Nodiq backend: ingestion, parsing, graph, retrieval, and reasoning pipeline."
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "pydantic>=2.13.4",
+]
 
 [dependency-groups]
 dev = [
