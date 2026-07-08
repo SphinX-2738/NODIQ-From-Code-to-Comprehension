@@ -9,25 +9,20 @@ a knowledge graph and grounded, cited AI chat.
 
 ## Architecture
 
+If you want it to look cleaner on GitHub, replace that pipeline section with this version that uses proper markdown formatting:
+markdown## Architecture
+
 The system is built as a modular pipeline with explicit data contracts 
 between each stage:
-GitHub repo / ZIP
-↓
-Repository Ingester
-↓
-Tree-sitter AST Parser → Python-only (MVP)
-↓
-OKF Extraction (Open Knowledge Format)
-↓
-Knowledge Graph Construction (NetworkX)
-↓
-Graph-Enriched Embedding Pipeline (ChromaDB + Gemini)
-↓
-LangGraph Reasoning Layer
-↓
-FastAPI REST API
-↓
-Next.js Frontend (in progress)
+
+1. **Repository Ingester** — downloads GitHub repos or extracts ZIP files
+2. **Tree-sitter AST Parser** — parses Python files into syntax trees
+3. **OKF Extraction** — converts AST into clean, structured recipe cards
+4. **Knowledge Graph** — connects OKF records into a navigable map
+5. **Embedding Pipeline** — enriches and stores records in ChromaDB
+6. **LangGraph Reasoning** — multi-step AI reasoning with confidence checks
+7. **FastAPI REST API** — exposes everything as a web API
+8. **Next.js Frontend** — chat interface and graph explorer *(in progress)*
 
 ## Key Concepts
 
